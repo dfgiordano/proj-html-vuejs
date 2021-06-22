@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <Main />
+    <Bands />
     <Footer />
   </div>
 </template>
@@ -9,10 +10,11 @@
 <script>
 import Header from './components/Header';
 import Main from './components/Main';
+import Bands from './components/Bands';
 import Footer from './components/Footer';
 
-import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import Vue from 'vue';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -28,6 +30,7 @@ export default {
   components: {
     Header,
     Main,
+    Bands,
     Footer
   }
 }

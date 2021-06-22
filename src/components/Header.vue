@@ -1,15 +1,26 @@
 <template>
     <header>
         <div class="container-nav">
-            <div class="accordion" :class="isOpen ? 'background-color-red' : '' " role="tablist">
+            <div class="accordion" :class="isOpen ? '' : 'background-color-red' " role="tablist">
                 <b-card no-body class="mb-1">
-                <b-card-header header-tag="header" class="p-1" role="tab">
-                    <b-button @click="clickMenuButton" class="menu-button" block v-b-toggle.accordion-1 variant="info"><i :class=" isOpen ? 'fas fa-times' : 'fas fa-bars' "></i></b-button>
+                <b-card-header header-tag="header" class="p-1 d-flex justify-content-between" role="tab">
+                    <img src="../assets/images/avada-music-logo-retina.png" alt="avada-logo">
+                    <b-button @click="clickMenuButton" class="menu-button" block v-b-toggle.accordion-1 variant="info"><i :class=" isOpen ? 'fas fa-bars' : 'fas fa-times' "></i></b-button>
                 </b-card-header>
-                <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
-                    <b-card-body>
-                    <b-card-text>I start opened because <code>visible</code> is <code>true</code></b-card-text>
-                    <b-card-text>stocazzo</b-card-text>
+                <b-collapse id="accordion-1" collapse accordion="my-accordion" role="tabpanel">
+                    <b-card-body>  
+                        <b-card-text 
+                        class="d-flex justify-content-center"
+                            v-for="(link,url) in links"
+                            :key="url"> 
+                                <code class="link"> 
+                                    <a 
+                                    :class=" { active : link.current }"
+                                    href="#">
+                                        {{ link.text }} 
+                                    </a>  
+                                </code>
+                        </b-card-text>
                     </b-card-body>
                 </b-collapse>
                 </b-card>
@@ -32,7 +43,39 @@ export default {
     data: function () {
         return {
             isOpen : true,
-        } 
+            links: [
+                {
+                    text: "home",
+                    url: "#Home",
+                    current: true
+                },
+                {
+                    text: "meet the band",
+                    url: "#Meet_the_band",
+                    current: false
+                },
+                {
+                    text: "live Dates",
+                    url: "#Live_Dates",
+                    current: false
+                },
+                {
+                    text: "latest News",
+                    url: "#Latest_News",
+                    current: false
+                },
+                {
+                    text: "albums",
+                    url: "#Albums",
+                    current: false
+                },
+                {
+                    text: "fans",
+                    url: "#Fans",
+                    current: false
+                }
+            ],
+        }
     },
      methods: {
          clickMenuButton: function () {
@@ -47,7 +90,7 @@ export default {
   @import '../style/general.scss';
     
     .container-nav {
-        // width: 85%;
+        width: 90%;
         height: 900px;
         margin: auto;
             img {
@@ -63,15 +106,16 @@ export default {
             left: 50%;
             top: 30%;
             transform: translate(-50%,-30%);
+            z-index: 1;
         }
             h1{
                 font-size: 120px;
                 font-weight: 700;
                 letter-spacing: 5px;
-                color: white;
+                color: $main_titles;
             }
             p {
-               color: white;
+               color: $main_titles;
                font-style: italic;
                
             }
@@ -83,17 +127,17 @@ export default {
             .first-btn {
                 width: 200px;
                 margin-right: 10px;
-                background-color: #EA4A56;
+                background-color: $secondary_titles;
                 border: none;
-                color: white;
+                color: $main_titles;
             }
             .second-btn {
                 width: 150px;
                 background-color: transparent;
-                border: 1px solid white;
-                color: white;
+                border: 1px solid $main_titles;
+                color: $main_titles;
                     &:hover {
-                        background-color: white;
+                        background-color: $main_titles;
                         color: #2D2E46;
                     }
             }
@@ -102,18 +146,36 @@ export default {
         background-color: transparent;
         border: none;
     }
-    
     .accordion {
+        position: relative;
+        z-index: 2;
         div.card.mb-1 {
             background-color: transparent;
             header.card-header.p-1 {
+                display: flex;
+                justify-content: flex-end;
                 background-color: transparent;
                 border: none;
             }
         }
     }
+    .link {
+        text-transform: capitalize;
+        line-height: 50px;
+        font-size: 20px;
+            .active {
+                color: $main_titles;
+            }
+                a {
+                    text-decoration: none;
+                    color: #DE7272;
+                            &:hover {
+                                color: $main_titles;
+                            }
+                }   
+    }
     .background-color-red {
-            background-color: #EC4758;
+            background-color: $secondary_titles;
         }
         .btn-check:focus,
         .btn-check:hover,

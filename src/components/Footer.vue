@@ -16,7 +16,8 @@
                 </ul> 
             </div>
         </div>
-        <div class="section_2 d-flex justify-content-between">
+        <div class="section_2_cont">
+            <div class="section_2 d-flex justify-content-between">
                 <ul class="align-self-center">
                     <li>
                         <a href="#">
@@ -35,28 +36,30 @@
                     </li>
                 </ul>
                 <ul class="align-self-center">
-                    <li>
+                    <li class="social">
                         <a href="#">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
-                    <li>
+                    <li class="social">
                         <a href="#">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
-                    <li>
+                    <li class="social">
                         <a href="#">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </li>
-                    <li >
+                    <li class="social">
                         <a href="#">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </li>
                 </ul>
         </div>
+        </div>
+        
     </div>
 </template>
 
@@ -121,14 +124,14 @@ export default {
 
     .section_1_cont {
         height: 150px;
-        background-color: #2D2E46;
+        background-color: #333844;
             .section_1 {
-                width: 85%;
+                width: 90%;
                 margin: auto;
             }
     }
     a:hover {
-        color: white;
+        color: $main_titles;
     }
     ul {
         display: inline;
@@ -136,28 +139,33 @@ export default {
             display: inline;
             list-style: none;
                 .active {
-                    color: white;
+                    color: $main_titles;
                 }
                 a {
                     margin-right: 10px;
                     text-decoration: none;
                     text-transform: capitalize;
                     margin-left: 10px;
-                    color: #AEAEB0;
+                    color: $text-color;
                 }
         }
     }
-    .section_2 {
+    .section_2_cont {
         display: flex;
-        height: 110px;
         background-color: #252A32;
-        color: #AEAEB0;
+    }
+    .section_2 {
+        width: 90%;
+        margin: auto;
+        height: 110px;
+        color: $text-color;
             .divider {
-            border-left: 2px solid #AEAEB0;
-                .social {
-                    padding: 5px;
-                    background-color: #333844;
-                }
+            border-left: 2px solid $text-color;
         }
+    }
+    .social {
+        padding: 5px;
+        margin: 5px;
+        background-color: #333844;
     }
 </style>
