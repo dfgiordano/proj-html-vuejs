@@ -166,6 +166,7 @@ export default {
     .social {
         padding: 5px;
         margin: 5px;
+        border-radius: 5px;
         background-color: #333844;
     }
 </style>

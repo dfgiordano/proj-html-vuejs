@@ -9,12 +9,17 @@
           <div class="divider"></div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odit molestias vel tempore eius animi possimus perspiciatis inventore consectetur.</p>
       </section>
+      <Bands />
   </div>
 </template>
 
 <script>
+import Bands from './Bands'
 export default {
     name: "Main",
+    components: {
+      Bands
+    }
 }
 </script>
 

@@ -13,36 +13,47 @@
             <div class="bands-images">
                 <div class="techno">
                     <img src="../assets/images/blog_music_techo.jpg" alt="music-techno-img">
-                    <h5>Technology and music</h5>
+                    <a href="#">
+                        <h5>Technology and music</h5> 
+                    </a>
                     <figure>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat culpa sunt, aut perspiciatis nesciunt.</figure>
                 </div>
                 <div class="guitars">
                     <img src="../assets/images/blog-post3.jpg" alt="guitars-img">
-                    <h5>Technology and music</h5>
+                    <a href="#">
+                        <h5>While my guitar gently weeps</h5> 
+                    </a>
                     <figure>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat culpa sunt, aut perspiciatis nesciunt.</figure>
                 </div>
                 <div class="sounds">
                     <img src="../assets/images/blog-post4.jpg" alt="sounds-img">
-                    <h5>Technology and music</h5>
+                    <a href="#">
+                        <h5>It just sounds better</h5> 
+                    </a>
                     <figure>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat culpa sunt, aut perspiciatis nesciunt.</figure>
                 </div>
                 <div class="rock">
                     <img src="../assets/images/blog_flavor_rock.jpg" alt="sounds-img">
-                    <h5>Technology and music</h5>
+                    <a href="#">
+                        <h5>The flavor of rock</h5> 
+                    </a>
                     <figure>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat culpa sunt, aut perspiciatis nesciunt.</figure>
                 </div>
                 <div class="legend">
-                    <img src="../assets/images/blog-post2.jpg" alt="old-school-music">
-                    <h5>Taking it back to the old school</h5>
+                    <img src="../assets/images/blog-post2.jpg" alt="">
+                    <a href="#">
+                        <h5>Sharing the stage with a legend</h5> 
+                    </a>
                     <figure>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat.</figure>
                 </div>
                 <div class="old-school">
                     <img src="../assets/images/blog-post1.jpg" alt="old-school-music">
-                    <h5>Taking it back to the old school</h5>
+                    <a href="#">
+                        <h5>Taking back to the old school</h5> 
+                    </a>
                     <figure>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat.</figure>
                 </div>
             </div>
-        
         </section>
         <button class="latest-news">
             <h4>
@@ -62,6 +73,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/general.scss';
+    a {
+        text-decoration: none;
+        color: $main_titles;
+    }
     .bands {
         text-align: center;
         padding-bottom: 80px;
@@ -75,6 +90,7 @@ export default {
                 text-decoration: none;
                 color: $main_titles;
             }
+            
         }
             .divider {
             height: 3px;
@@ -104,6 +120,7 @@ export default {
                     img {
                         height: 150px;
                         width: 100%;
+                        cursor: pointer;
                     }
                     h5 {
                         margin: 10px;
@@ -129,6 +146,7 @@ export default {
                 img {
                     height: 350px;
                     width: 100%;
+                    cursor: pointer;
                 }
                 h5 {
                     margin: 10px;
@@ -156,6 +174,7 @@ export default {
                 img {
                     height: 320px;
                     width: 100%;
+                    cursor: pointer;
                 }
                 h5 {
                     margin: 10px;
@@ -181,6 +200,7 @@ export default {
                 img {
                     height: 320px;
                     width: 100%;
+                    cursor: pointer;
                 }
                 h5 {
                     margin: 10px;
@@ -207,6 +227,7 @@ export default {
                 img {
                     height: 350px;
                     width: 100%;
+                    cursor: pointer;
                 }
                 h5 {
                     margin: 10px;
@@ -231,6 +252,7 @@ export default {
                 img {
                     height: 150px;
                     width: 100%;
+                    cursor: pointer;
                 }
                 h5 {
                     margin: 10px;
@@ -246,8 +268,6 @@ export default {
                 }
         }
     }
-        
-   
     .latest-news {
         display: flex;
         justify-content: center;

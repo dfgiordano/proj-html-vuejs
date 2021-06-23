@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Main />
-    <Bands />
+    <Player />
     <Footer />
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 import Header from './components/Header';
 import Main from './components/Main';
-import Bands from './components/Bands';
+import Player from './components/Player';
 import Footer from './components/Footer';
 
 import Vue from 'vue';
@@ -30,7 +30,7 @@ export default {
   components: {
     Header,
     Main,
-    Bands,
+    Player,
     Footer
   }
 }
