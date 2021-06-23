@@ -1,7 +1,8 @@
 <template>
   <div>
-      <section class="music">
-          <h3>
+      <section class="music position-relative text-center">
+        <div class="active"></div>
+          <h3 class="text-capitalize">
             <a href="#">
               music is lIfe
             </a>
@@ -10,48 +11,45 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odit molestias vel tempore eius animi possimus perspiciatis inventore consectetur.</p>
       </section>
       <Bands />
+      <Player />
+      <Dates />
   </div>
 </template>
 
 <script>
 import Bands from './Bands'
+import Player from './Player'
+import Dates from './Dates'
+
 export default {
     name: "Main",
     components: {
-      Bands
-    }
+      Bands,
+      Player,
+      Dates,
+    },
 }
 </script>
 
 <style lang="scss" scoped>
-  @import '../style/general.scss';
+@import '../style/general.scss';
+@import '../style/mixins.scss';
 
-    .music {
-      height: 300px;
-      background-color: #333844;
-      text-align: center;
+  .music {
+      height: 315px;
+      padding-top: 80px;
+      background-color: $light-background-img;
         h3 {
-          text-transform: capitalize;
-          font-size: 50px;
-          font-weight: 800;
-          padding: 50px 0;
-            a {
-              text-decoration: none;
-              color: white;
-            }
+          @include h3;
         }
         .divider {
-          height: 3px;
-          width: 250px;
-          margin: auto;
-          background-color: #424958;
+          @include divider;
         }
         p {
-          width: 40%;
-          margin: 30px auto;
-          line-height: 30px;
-          font-size: 14px;
-          color: #AEAEB0;
+          @include paragraph;
         }
+    }
+    .active {
+      @include active-section;
     }
 </style>

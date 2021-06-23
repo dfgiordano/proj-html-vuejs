@@ -1,0 +1,135 @@
+@mixin layover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    font-size: $font-paragraph;
+    background-color: #EC4758;
+    color: white;
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+    }
+}
+@mixin h3 {
+    font-size: 50px;
+    font-weight: 800;
+    padding-top: 35px;
+        a {
+            text-decoration: none;
+            color: $main-titles;
+        }
+}
+@mixin h5 {
+    margin: 10px;
+    font-size: $font-paragraph;
+    font-weight: 600;
+    color: $secondary-titles;
+}
+@mixin figure {
+    margin: 10px;
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: $text-color;
+}
+@mixin divider {
+    height: 3px;
+    width: 250px;
+    margin: auto;
+    background-color: #424958;
+}
+@mixin paragraph {
+    width: 40%;
+    margin: 30px auto;
+    line-height: 30px;
+    font-size: $font-paragraph;
+    color: $text-color;
+}
+@mixin hover-button {
+    background-color: $main-titles;
+    color: $dark-background;
+}
+@mixin big-button {
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    border: none;
+    color: $main-titles;
+    background-color: $secondary-titles;
+        &:hover {
+            @include hover-button;
+        }
+        h4 {
+            align-self: center;
+            font-size: 16px;
+        }
+}
+@mixin active-section {
+    height: 20px;
+    width: 500px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $secondary-titles;
+}
+@mixin orizontal-img {
+    width: 530px;
+    height: 230px;
+    text-align: left;
+    background-color: $light-background-img;
+        img {
+            height: 150px;
+            width: 100%;
+            cursor: pointer;
+        }
+        h5 {
+            @include h5;
+        }
+        figure {
+            @include figure;
+        }
+}
+@mixin vertical-middle-img {
+    position: absolute;
+    top: 25%;
+    width: 250px;
+    height: 430px;
+    text-align: left;
+    margin-top: 20px;
+    background-color: $light-background-img;
+        img {
+            height: 350px;
+            width: 100%;
+            cursor: pointer;
+        }
+        h5 {
+            @include h5;
+        }
+        figure {
+            @include figure;
+        }
+}
+@mixin vertical-img {
+    width: 250px;
+    height: 455px;
+    position: absolute;
+    right: 5%;
+    margin-left: 20px;
+    text-align: left;
+    background-color: $light-background-img;
+        img {
+            height: 350px;
+            width: 100%;
+            cursor: pointer;
+        }
+        h5 {
+            @include h5;
+        }
+        figure {
+            @include figure;
+        }
+}

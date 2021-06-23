@@ -16,7 +16,7 @@
                 </ul> 
             </div>
         </div>
-        <div class="section_2_cont">
+        <div class="section_2_cont d-flex">
             <div class="section_2 d-flex justify-content-between">
                 <ul class="align-self-center">
                     <li>
@@ -124,7 +124,7 @@ export default {
 
     .section_1_cont {
         height: 150px;
-        background-color: #333844;
+        background-color: $light-background-img;
             .section_1 {
                 width: 90%;
                 margin: auto;
@@ -151,8 +151,7 @@ export default {
         }
     }
     .section_2_cont {
-        display: flex;
-        background-color: #252A32;
+        background-color: $dark-background;
     }
     .section_2 {
         width: 90%;
@@ -167,6 +166,6 @@ export default {
         padding: 5px;
         margin: 5px;
         border-radius: 5px;
-        background-color: #333844;
+        background-color: $light-background-img;
     }
 </style>
